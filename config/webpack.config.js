@@ -3,10 +3,12 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/app.js',
+    entry: {
+        main: './src/app.js',
+    },        
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: 'build.js'
+        filename: '[name].build.js'
     },        
     devtool: 'false',
     module: {

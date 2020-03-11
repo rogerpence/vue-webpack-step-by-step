@@ -1,7 +1,9 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const path = require('path');
 
-module.exports = {
+const DO_NOT_USE_EVAL_IN_BUILD = 'false';
+
+module.exports = {    
     mode: 'development',
     entry: {
         main: './src/app.js',
@@ -10,12 +12,13 @@ module.exports = {
         path: path.join(__dirname, '../dist'),
         filename: '[name].build.js'
     },        
-    devtool: 'false',
+    devtool: DO_NOT_USE_EVAL_IN_BUILD,
     module: {
         rules: [{
-            test: /\.vue$/,
-            loader: 'vue-loader',
-        }, ]
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
+         ]
     },
     plugins: [
         new VueLoaderPlugin(),        

@@ -1,5 +1,18 @@
 <template>
   <div>
-    <h1>Hello World!55</h1>
+    <h1>This is from App.vue</h1>
+    <message-component name="Vue.js"/>
   </div>
 </template>
+
+<script>
+
+import MessageComponent from './components/MessageComponent.vue'
+
+export default {
+    name: 'app',
+    components: {
+        MessageComponent
+    }        
+}
+</script>

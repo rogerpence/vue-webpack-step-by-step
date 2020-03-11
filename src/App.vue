@@ -7,7 +7,8 @@
 
 <script>
 
-import MessageComponent from './components/MessageComponent.vue'
+//import MessageComponent from './components/MessageComponent'
+import MessageComponent from 'components/MessageComponent'
 
 export default {
     name: 'app',

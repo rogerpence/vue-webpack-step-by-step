@@ -563,7 +563,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_MessageComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MessageComponent.vue */ "./src/components/MessageComponent.vue");
+/* harmony import */ var components_MessageComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! components/MessageComponent */ "./src/components/MessageComponent.vue");
 //
 //
 //
@@ -573,12 +573,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 
+//import MessageComponent from './components/MessageComponent'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'app',
     components: {
-        MessageComponent: _components_MessageComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+        MessageComponent: components_MessageComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
     }        
 });
 

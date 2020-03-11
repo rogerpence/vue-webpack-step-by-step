@@ -20,6 +20,12 @@ module.exports = {
             },
          ]
     },
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname, '../src/components'),
+        },
+        extensions: ['.vue'],
+    },
     plugins: [
         new VueLoaderPlugin(),        
     ],

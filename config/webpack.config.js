@@ -1,10 +1,13 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 
-const DO_NOT_USE_EVAL_IN_BUILD = 'false';
+devtoolOptions = {
+    DO_NOT_USE_EVAL_IN_BUILD : 'false',
+}
 
 module.exports = {
     mode: 'development',
@@ -15,12 +18,21 @@ module.exports = {
         path: path.join(__dirname, '../dist'),
         filename: '[name].build.js'
     },
-    devtool: DO_NOT_USE_EVAL_IN_BUILD,
+    devtool: devtoolOptions.DO_NOT_USE_EVAL_IN_BUILD,
     module: {
         rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
             },
+            {
+                test: /\.css$/,
+                use: [
+                  MiniCssExtractPlugin.loader,
+                //   'style-loader',<--not necessary unless freestanding CSS?
+                //   'vue-style-loader',
+                  'css-loader'
+                ]
+              }            
          ]
     },
     resolve: {
@@ -39,7 +51,8 @@ module.exports = {
             // },
             hash: true,
             template: './src/index.html',
-        })
+        }),
+        new MiniCssExtractPlugin({filename: '[name].[contentHash].css'})
     ],
     devServer: {
         host: 'localhost',

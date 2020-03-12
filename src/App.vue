@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="full-width center-content">
     <h1>This is from App.vue</h1>
     <message-component name="Vue.js"/>
   </div>
@@ -17,3 +17,16 @@ export default {
     }        
 }
 </script>
+
+<style scoped>
+    .full-width {
+        width: 100%;
+        background-color: pink;
+    }
+
+    .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

@@ -1,0 +1,4 @@
+{
+  "main.js": "main.build.js",
+  "index.html": "index.html"
+}

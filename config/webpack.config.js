@@ -1,4 +1,7 @@
 const { VueLoaderPlugin } = require('vue-loader');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+
 const path = require('path');
 
 const DO_NOT_USE_EVAL_IN_BUILD = 'false';
@@ -28,6 +31,15 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        new ManifestPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'injected',
+            // minify: {
+            //     collapseWhitespace: true,
+            // },
+            hash: true,
+            template: './src/index.html',
+        })
     ],
     devServer: {
         host: 'localhost',

@@ -3,15 +3,15 @@ const path = require('path');
 
 const DO_NOT_USE_EVAL_IN_BUILD = 'false';
 
-module.exports = {    
+module.exports = {
     mode: 'development',
     entry: {
         main: './src/app.js',
-    },        
+    },
     output: {
         path: path.join(__dirname, '../dist'),
         filename: '[name].build.js'
-    },        
+    },
     devtool: DO_NOT_USE_EVAL_IN_BUILD,
     module: {
         rules: [{
@@ -24,15 +24,15 @@ module.exports = {
         alias: {
             components: path.resolve(__dirname, '../src/components'),
         },
-        extensions: ['.vue'],
+        extensions: ['.vue', '.js'],
     },
     plugins: [
-        new VueLoaderPlugin(),        
+        new VueLoaderPlugin(),
     ],
     devServer: {
         host: 'localhost',
         contentBase: "./dist",
         hot: true,
         port: 8080,
-    },   
+    },
 }

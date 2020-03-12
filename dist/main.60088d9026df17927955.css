@@ -1,6 +1,7 @@
 
 .full-width[data-v-7ba5bd90] {
     width: 100%;
+    background-color: pink;
 }
 .center-content[data-v-7ba5bd90] {
     display: flex;
@@ -8,3 +9,6 @@
     align-items: center;
 }
 
+body {
+    background-color: orange;
+}

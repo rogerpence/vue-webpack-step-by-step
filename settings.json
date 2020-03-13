@@ -1,0 +1,131 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "fira code",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "explorer.compactFolders": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.activityBar.visible": true,
+    "explorer.openEditors.visible": 0,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dist/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/dist/css"
+        }
+    ],
+
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "gitlens.keymap": "none",
+    "markdown.styles": [
+        "https://asna.com/filebin/marketing/specialfiles/code-style.css"
+    ],
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "sync.gist": "fae6990bcb5599397f99d73f075269ad",
+    "sync.lastUpload": "2018-07-25T18:32:21.144Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "editor.rulers": [
+        60,
+        75
+    ],
+    "gitlens.historyExplorer.enabled": true,
+    "blankLine.keepOneEmptyLine": false,
+    "blankLine.triggerOnSave": false,
+    "editor.renderWhitespace": "all",
+    "editor.detectIndentation": false,
+    "terminal.integrated.rendererType": "dom",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "window.restoreWindows": "none",
+    "files.hotExit": "off",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.confirmDragAndDrop": false,
+    "editor.wordWrapColumn": 60,
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80
+    },
+    "[html]": {
+        "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+    },
+    "editor.lineHeight": 28,
+    "workbench.tree.indent": 32,
+    "editor.cursorBlinking": "expand",
+    "[javascript]": {
+        "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+    },
+    "better-comments.tags": [
+        {
+          "tag": "!",
+          "color": "#FF2D00",
+          "strikethrough": false,
+          "backgroundColor": "transparent"
+        },
+        {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "backgroundColor": "transparent"
+        },
+        {
+          "tag": "//",
+          "color": "#474747",
+          "strikethrough": true,
+          "backgroundColor": "transparent"
+        },
+        {
+          "tag": "todo",
+          "color": "#f4d03f",
+          "strikethrough": false,
+          "backgroundColor": "transparent"
+        },
+        {
+          "tag": "*",
+          "color": "#98C379",
+          "strikethrough": false,
+          "backgroundColor": "transparent"
+        }
+    ],
+    "breadcrumbs.enabled": true,
+    "editor.cursorSurroundingLines": 8,
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}Code",
+    "editor.cursorSmoothCaretAnimation": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "workbench.tree.renderIndentGuides": "always",
+    "guides.enabled": false,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

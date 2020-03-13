@@ -1,6 +1,6 @@
 <template>
   <div class="full-width center-content">
-    <h1>This is from App.vue</h1>
+    <h1>This is from App.vue.</h1>
     <message-component name="Vue.js"/>
   </div>
 </template>

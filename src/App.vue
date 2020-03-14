@@ -1,6 +1,8 @@
 <template>
-  <div class="full-width center-content">
-    <h1>This is from App.vue.</h1>
+  <div>
+      <div class="full-width center-content">
+        <h1 class="text-3xl">This is from App.vue.</h1>
+    </div>
     <message-component name="Vue.js"/>
   </div>
 </template>
@@ -14,7 +16,7 @@ export default {
     name: 'app',
     components: {
         MessageComponent
-    }        
+    }
 }
 </script>
 

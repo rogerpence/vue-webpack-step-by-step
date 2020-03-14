@@ -4,10 +4,13 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+// const tailwindcss = require("tailwindcss");
+// const autoprefixer = require("autoprefixer");
+
 const path = require('path');
 
 devtoolOptions = {
-    DO_NOT_USE_EVAL_IN_BUILD : 'false',
+    DO_NOT_USE_EVAL_IN_BUILD: 'false',
 }
 
 module.exports = {
@@ -21,20 +24,29 @@ module.exports = {
     },
     devtool: devtoolOptions.DO_NOT_USE_EVAL_IN_BUILD,
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.vue$/,
                 loader: 'vue-loader',
             },
             {
                 test: /\.css$/,
                 use: [
-                  MiniCssExtractPlugin.loader,
-                //   'style-loader',<--not necessary unless freestanding CSS?
-                //   'vue-style-loader',
-                  'css-loader'
+                    MiniCssExtractPlugin.loader,
+                    //   'style-loader',<--not necessary unless freestanding CSS?
+                    //   'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: {
+                                path: './postcss.config.js',
+                            }
+                        }
+                    }
                 ]
-              }            
-         ]
+            }
+        ]
     },
     resolve: {
         alias: {
@@ -54,12 +66,13 @@ module.exports = {
             hash: true,
             template: './src/index.html',
         }),
-        new MiniCssExtractPlugin({filename: '[name].[contentHash].css'})
+
+        new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' })
     ],
     devServer: {
         host: 'localhost',
         contentBase: "./dist",
         hot: true,
-        port: 8080,
+        port: 5000,
     },
 }

@@ -3,6 +3,8 @@
       <div class="full-width center-content">
         <h1 class="text-3xl">This is from App.vue.</h1>
     </div>
+    <img src="./images/johnny-cash.png" alt="">
+
     <message-component name="Vue.js"/>
   </div>
 </template>

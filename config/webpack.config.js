@@ -33,8 +33,6 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    //   'style-loader',<--not necessary unless freestanding CSS?
-                    //   'vue-style-loader',
                     'css-loader',
                     {
                         loader: 'postcss-loader',

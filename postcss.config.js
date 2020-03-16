@@ -2,7 +2,7 @@
 const autoprefixer = require('autoprefixer');
 const tailwindcss = require('tailwindcss');
 
-module.exports = {
+productionExports = {
    plugins: [
       tailwindcss,
       autoprefixer,
@@ -18,3 +18,17 @@ module.exports = {
      }),
    ],
 };
+
+developmentExports = {
+   plugins: [
+      tailwindcss,
+      autoprefixer,
+   ],
+};
+
+if (process.env.NODE_ENV === 'production') {
+   module.exports = productionExports;
+}
+else {
+   module.exports = developmentExports;
+}

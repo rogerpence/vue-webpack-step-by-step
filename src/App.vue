@@ -9,7 +9,6 @@
     <div>
         <img src="./images/zappa.png" alt="">
     </div>
-
     <message-component name="Vue.js"/>
   </div>
 </template>

@@ -590,7 +590,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 //import MessageComponent from './components/MessageComponent'
@@ -9518,7 +9517,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/johnny-cash.8937f1508d108a4ea923ac5c00d74045.png";
+module.exports = __webpack_require__.p + "images/johnny-cash.168bc61a4ebb60d59eb28a8f50b371a9.png";
 
 /***/ }),
 
@@ -9529,7 +9528,7 @@ module.exports = __webpack_require__.p + "images/johnny-cash.8937f1508d108a4ea92
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/zappa.ce101c92057e175e510b5c61a9b2af57.png";
+module.exports = __webpack_require__.p + "images/zappa.bacc166b39727078583e68d3f0090553.png";
 
 /***/ }),
 

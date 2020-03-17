@@ -10,7 +10,7 @@ devtoolOptions = {
     DO_NOT_USE_EVAL_IN_BUILD: 'false',
 }
 
-const cssUse =  [
+const cssLoaders =  [
     MiniCssExtractPlugin.loader,
     'css-loader',
     {
@@ -21,37 +21,35 @@ const cssUse =  [
             }
         }
     }
-]
+];
 
-const imgLoaderUse = [
-    'url-loader?limit=10000',
-    {
-        loader: 'img-loader',
-        options: {
-            plugins: [
-                require('imagemin-gifsicle')({
-                interlaced: false
-                }),
-                require('imagemin-mozjpeg')({
-                    progressive: true,
-                    arithmetic: false
-                }),
-                require('imagemin-pngquant')({
-                    floyd: 0.5,
-                    speed: 2
-                }),
-                require('imagemin-svgo')({
-                    plugins: [
-                        { removeTitle: true },
-                        { convertPathData: false }
-                    ]
-                })
-            ]
-        }
+const imageWebpackLoaderOptions = {
+    mozjpeg: {
+        progressive: true,
+        quality: 65
+    },
+    // optipng.enabled: false will disable optipng
+    optipng: {
+        enabled: false
+    },
+    pngquant: {
+        quality: [0.75, 0.90],
+        speed: 10
+    },
+    gifsicle: {
+        interlaced: false,
+    },
+    // the webp option will enable WEBP
+    webp: {
+        quality: 75
     }
-]
+};
 
-// https://www.npmjs.com/package/img-loader
+const fileLoaderOptions = {
+    name: '[name].[hash].[ext]',
+    outputPath: 'images',
+    esModule: false
+};
 
 module.exports = {
     mode: 'development',
@@ -71,7 +69,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: cssUse
+                use: cssLoaders
             },
             {
                 test: /\.html$/,
@@ -82,35 +80,11 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: '[name].[hash].[ext]',
-                            outputPath: 'images',
-                            esModule: false
-                        },
+                        options: fileLoaderOptions,
                     },
                     {
                         loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            // optipng.enabled: false will disable optipng
-                            optipng: {
-                                enabled: false
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            },
-                            // the webp option will enable WEBP
-                            webp: {
-                                quality: 75
-                            }
-                        }
+                        options: imageWebpackLoaderOptions,
                     }
                 ]
             },
